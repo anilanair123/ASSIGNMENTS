@@ -1,0 +1,32 @@
+#include <stdio.h>
+void swap1(int,int);
+void swap2(int*, int*);
+int main()
+{
+    int a,b;
+  
+    printf("enter a and b values\n");
+    scanf("%d%d",&a,&b);
+    printf("swaping before a and b values \n %d \t %d \n",a,b);
+    swap1(a,b);
+    swap2(&a,&b);
+    
+    return 0;
+}
+void swap1(int x,int y)
+{
+    x=x+y;
+    y=x-y;
+    x=x-y;
+    printf("swaping after (call by value ) a and b values \n %d \t %d \n",x,y);
+}
+
+void swap2(int *x,int *y)
+{
+    int *z;
+    *z=*x;
+    *x=*y;
+    *y=*z;
+    printf("swaping after (call by reference) a and b values \n%d\t%d\n",*x,*y);
+    
+}
