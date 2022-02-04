@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	char ch[50];
+	int i,vcount=0,concount=0;
+	printf("enter a name in a single word");
+	gets(ch);
+	for(i=0;ch[i]!='\0';i++)
+	{
+		if(ch[i]== 'A'||ch[i]== 'a'||ch[i]== 'E'||ch[i]== 'e'||ch[i]=='I'||ch[i]== 'i'||ch[i]== 'O'||ch[i]== 'o'||ch[i] =='U'||ch[i] =='u')
+		 vcount=vcount+1;
+		 else 
+				concount=concount+1;
+	}
+	printf("no of vowels in the given string = %d\n",vcount);
+	printf("no of consonants in the given string = %d\n",concount);
+}
