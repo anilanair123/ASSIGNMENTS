@@ -1,0 +1,41 @@
+#include <stdio.h>
+  struct student
+  {
+	int rno,s1,s2,s3;
+	char sname[20]; 
+   }s[10];
+int main()
+{
+	int i,tot,n;
+	float avg;
+	printf("enter no of students\n");
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++)
+	{
+		printf("ENTER STUDENT RNO, SNAME, SUB1, SUB2, SUB3 MARKS\n");
+	scanf("%d%s%d%d%d",&s[i].rno,s[i].sname,&s[i].s1,&s[i].s2,&s[i].s3);
+	tot=s[i].s1+s[i].s2+s[i].s3;
+	avg=tot/3;
+	printf("\nSTUDENT progress \n");
+	printf("STUDENT ROLL NO =  %d \n",s[i].rno);
+	printf("STUDENT NAME =  %s \n",s[i].sname);
+	printf("MARKS in 3 subjects \n %d\n%d\n%d \n",s[i].s1,s[i].s2,s[i].s3);
+	if(s[i].s1>=50&&s[i].s2>=50&&s[i].s3>=50)
+	{
+	if(avg>=90)
+	printf("'O' GRADE \n");
+	else if(avg>=80||avg<90)
+	printf("'A' GRADE\n");
+	else if(avg>=70||avg<80)
+	printf("'B' GRADE\n");
+	else if(avg>=60||avg<70)
+	printf("'C' GRADE\n");
+	else
+	printf("'D' GRADE\n");
+	}
+	else
+	printf("FAIL\n");
+} 
+    return 0;
+}
