@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+	char string[50];
+	int i=0;
+	printf("enter a string\n");
+	scanf("%s",string);
+	if(string[i]>=65&&string[i]<=96||string[i]>=97&&string[i]<=122)
+	{
+	for(i=0;string[i]!='\0';i++)
+	{
+		printf("%c",string[i+1]);
+		
+	}	
+	}
+
+}
