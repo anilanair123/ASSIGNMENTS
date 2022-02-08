@@ -1,0 +1,17 @@
+#include<stdio.h>
+void nos(int);
+int n;
+int main()
+
+{
+	printf("enter a number");
+	scanf("%d",&n);
+	nos(n);
+	return 0;
+}
+void nos(int n)
+{
+	printf("%d\n",n);
+	if(n>1)
+	nos(n-1);
+}
