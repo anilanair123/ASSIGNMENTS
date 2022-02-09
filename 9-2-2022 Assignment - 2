@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int n,a[20],i,sum=0,x;
+int *p=a;
+printf("enter using size of array\n")	;
+scanf("%d",&n);
+printf("enter %d elements in to array\n",n);
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+p=a;
+for(i=0;i<n;i++)
+{
+	x=*(p+i);
+	sum=sum+x;
+}
+printf("sum array nos =%d",sum);
+return 0;
+}
