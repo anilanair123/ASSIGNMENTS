@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int n,*p,*q,*x,*y,*z,a,b,*c,*d;
+printf("enter a number\n")	;
+scanf("%d",&n);
+p=&n;
+q=&n;
+x=&n;
+y=&n;
+c=&n;
+d=&n;
+printf("address of %d is = %u\n",n,p);
+p=p+1;
+printf("increment of address value of %d   =%u\n",n,p);
+q=q-1;
+printf("decrement of address value of %d   =%u \n",n,q);
+printf("enter a number add to %d \n",n,a);
+scanf("%d",&a);
+x=c+a;
+printf("after adding %u to %d is  =%u\n",c,a,x);
+printf("enter a number subtract from  %d \n",n,b);
+scanf("%d",&b);
+y=d-b;
+printf("after subtracting %u from %d is  =%u\n",d,n,y);
+return 0;
+}
