@@ -1,0 +1,20 @@
+#include<stdlib.h>
+#include<stdio.h>
+int main()
+{
+	FILE *f;
+	char ch,a[100];
+	int n,i;
+	f=fopen("fileprogram.txt","w");
+	printf("enter data into new file \n");
+	gets(a);
+	n=strlen(a);
+	for(i=0;i<n;i++)
+	{
+		ch=a[i];
+		fputc(ch,f);
+	}
+	printf("file is created");
+	fclose(f);
+	return 0;
+}
